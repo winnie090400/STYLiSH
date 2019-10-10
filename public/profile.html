@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Stylish</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      *{
+        margin:0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        /*border:1px solid black;*/
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .navbar{
+        border-bottom: 20px;
+        border-color: black;
+      }
+
+      .nav-link{
+        vertical-align: middle;
+        text-decoration: none;
+        color: #8b572a;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 20px;
+        /*text-align: left;*/
+      }
+
+      .flexbox{
+        display: flex;
+      }
+      
+      main{
+        margin-top: 7em;
+        height: 77vh;
+      }
+
+      main img{
+        display: block;
+      }
+
+      footer{
+        align-items: center;
+        margin:0;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .footerNav a{
+        font-family: PingFangTC;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #f5f5f5;
+        text-decoration: none;
+        margin:2em;
+      }
+      
+      footer ul{
+        margin-top: 1em;
+        margin-right: 5em;
+      }
+
+      footer img{
+        width: 15%;
+        height: 15%;
+        margin-right: 1em;
+      }
+
+      .colorBox{
+        height: 20px;
+        width: 20px;
+        margin-right: .5em;
+      }
+
+      .row {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
+      <a class="navbar-brand" href="/index.html"><img src="icon/logo.png" alt="logo" height=35% width=35%></a>
+      
+  
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active navbar-left">
+        <a class="nav-link" href="#" style="color: black;">女裝<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item navbar-left">
+        <a class="nav-link" href="#" style="color: black;">男裝</a>
+      </li>
+      <li class="nav-item navbar-left">
+        <a class="nav-link" href="#" style="color: black;">配件</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="input-group">
+      <input class="form-control mr-sm-2" type="text" aria-label="Search">
+      <!-- <button class="btn my-2 my-sm-0" type="submit"></button> -->
+      </div>
+    </form>
+    <ul class="flexbox">
+      <li class="search"><img src="icon/search.png"></li>
+      <li class="cart"><img src="icon/cart.png" alt=""></li>
+      <li class="member"><a href="/profile.html"><img src="icon/member.png"></a></li>
+    </ul>
+  </div>
+</nav>
+
+<main role="main">
+  <div class="user-info container">
+    <div class="id"></div>
+    <div class="provider"></div>
+    <div class="name"></div>
+    <div class="email"></div>
+    <img class="picture" style="height: 30%; width: 30%;">
+
+
+    <button type="button" onclick="logout()">logout</button>
+  </div>
+  
+</main>
+
+<footer class="bg-dark flexbox">
+  <ul class="footerNav flexbox">
+    <li><a href="#">關於 Stylish</a></li>
+    <li><a href="#">服務條款</a></li>
+    <li><a href="#">隱私政策</a></li>
+    <li><a href="#">聯絡我們</a></li>
+    <li><a href="#">FAQ</a></li>     
+  </ul> 
+
+  <div class="footerIcon">
+    <img src="icon/facebook.png">
+    <img src="icon/line.png">
+    <img src="icon/twitter.png">
+  </div>
+
+
+</footer>
+
+<script>
+  
+  //取得localstorage user_info
+  var user_info = localStorage.getItem('user_info');
+
+  if(!user_info){
+    window.location.assign('/signin.html');
+  }
+  // {"data":{"access_token":"394bce1d4f095331c304af524f4eb293181df83becc6d1282d2bac06e549a89d","access_expired":"1564385947165","user":{"id":2,"provider":"native","name":"222","eamil":"222@222.com","picture":"temp.jpg"}}}
+
+  //set header authorization 為剛剛取得的token
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.open("GET", "/user/profile",true);
+
+  var token = JSON.parse(user_info).data.access_token;
+  // console.log(token);
+  xhr.setRequestHeader('Authorization', 'Bearer '+ token);
+  
+  // {"data":{"id":2,"provider":"native","name":"222","eamil":"222@222.com","picture":"temp.jpg"}}
+  xhr.onload = function(){
+    // var signin_response = JSON.parse(xhr.responseText);
+    var signin_response = JSON.parse(xhr.responseText);
+    console.log(signin_response.data);
+    if(!signin_response.data){
+      //token過期 > 導回sign in 畫面
+      window.location.assign('/signin.html');
+    }else{
+      //token有效 > 顯示profile
+      var id = document.querySelector(".id");
+      id.textContent = "ID: "+signin_response.data.id;
+      var provider = document.querySelector(".provider");
+      provider.textContent = "Provider: "+signin_response.data.provider;
+      var name = document.querySelector(".name");
+      name.textContent = "Name: "+signin_response.data.name;
+      var email = document.querySelector(".email");
+      email.textContent = "Email: "+ signin_response.data.email;
+      var picture = document.querySelector(".picture");
+      picture.src = signin_response.data.picture;
+    }
+
+  }
+
+  xhr.send();
+  
+
+  function logout(){
+    localStorage.removeItem('user_info');
+    window.location.assign('/signin.html');
+  }
+
+</script>
+
+</body>
+</html>

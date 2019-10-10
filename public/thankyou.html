@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Stylish</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      *{
+        margin:0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        /*border:1px solid black;*/
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .navbar{
+        border-bottom: 20px;
+        border-color: black;
+        height: 10vh;
+      }
+
+      .nav-link{
+        vertical-align: middle;
+        text-decoration: none;
+        color: #8b572a;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 20px;
+        /*text-align: left;*/
+      }
+
+      .flexbox{
+        display: flex;
+      }
+
+      main{
+        margin-top: 7em;
+        height: 75vh;
+        margin-left: 3em; 
+      }
+      
+      footer{
+        align-items: center;
+        margin:0;
+        justify-content: center;
+        padding: 0;
+        height: 10vh;
+      }
+
+      .footerNav a{
+        font-family: PingFangTC;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #f5f5f5;
+        text-decoration: none;
+        margin:2em;
+      }
+      
+      footer ul{
+        margin-top: 1em;
+        margin-right: 5em;
+      }
+
+      footer img{
+        width: 15%;
+        height: 15%;
+        margin-right: 1em;
+      }
+
+      .colorBox{
+        height: 20px;
+        width: 20px;
+        margin-right: .5em;
+      }
+
+      .row {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
+      <a class="navbar-brand" href="/index.html"><img src="icon/logo.png" alt="logo" height=35% width=35%></a>
+      
+  
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active navbar-left">
+        <a class="nav-link" href="#" style="color: black;">女裝<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item navbar-left">
+        <a class="nav-link" href="#" style="color: black;">男裝</a>
+      </li>
+      <li class="nav-item navbar-left">
+        <a class="nav-link" href="#" style="color: black;">配件</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="input-group">
+      <input class="form-control mr-sm-2" type="text" aria-label="Search">
+      <!-- <button class="btn my-2 my-sm-0" type="submit"></button> -->
+      </div>
+    </form>
+    <ul class="flexbox">
+      <li class="search"><img src="icon/search.png"></li>
+      <li class="cart"><img src="icon/cart.png" alt=""></li>
+      <li class="member"><a href="/profile.html"><img src="icon/member.png" alt=""></a></li>
+    </ul>
+  </div>
+</nav>
+
+<main role="main">
+    <div>Thank you!</div>
+    <p class="msg"></p>  
+</main>
+
+<footer class="bg-dark flexbox">
+  <ul class="footerNav flexbox">
+    <li><a href="#">關於 Stylish</a></li>
+    <li><a href="#">服務條款</a></li>
+    <li><a href="#">隱私政策</a></li>
+    <li><a href="#">聯絡我們</a></li>
+    <li><a href="#">FAQ</a></li>     
+  </ul> 
+
+  <div class="footerIcon">
+    <img src="icon/facebook.png">
+    <img src="icon/line.png">
+    <img src="icon/twitter.png">
+  </div>
+
+
+</footer>
+
+<script>
+        var url = new URLSearchParams(window.location.search); // get URL params in DOM
+        var orderNumber = url.get("orderNumber");
+        var msg = document.querySelector(".msg");
+        msg.textContent = `訂單編號：${orderNumber}`;
+</script>
+
+</body>
+</html>

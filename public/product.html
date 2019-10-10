@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Stylish</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      *{
+        margin:0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        /*border:1px solid black;*/
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .navbar{
+        border-bottom: 20px;
+        border-color: black;
+      }
+
+      .nav-link{
+        vertical-align: middle;
+        text-decoration: none;
+        color: #8b572a;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 20px;
+        /*text-align: left;*/
+      }
+
+      .flexbox{
+        display: flex;
+      }
+      
+      main{
+        margin-top: 7em;
+      }
+      
+      .detail-panel div{
+        margin-bottom: .7em;
+      }
+      .main-detail{
+        letter-spacing: 7px;
+      }
+
+      .amount-containe ul{
+        margin-left: .8em;      }
+      .amount-containe ul li{
+        border: 1px solid black;
+        letter-spacing: 7px;
+        text-align: center;
+        /*justify-content: center;*/
+      }
+
+      .number{
+        width: 2em;
+      }
+
+      .info{
+        font-size: .8em;
+      }
+
+      footer{
+        align-items: center;
+        margin:0;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .footerNav a{
+        font-family: PingFangTC;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #f5f5f5;
+        text-decoration: none;
+        margin:2em;
+      }
+      
+      footer ul{
+        margin-top: 1em;
+        margin-right: 5em;
+      }
+
+      footer img{
+        width: 15%;
+        height: 15%;
+        margin-right: 1em;
+      }
+
+      .colorBox{
+        height: 20px;
+        width: 20px;
+        margin-right: .5em;
+      }
+
+      .row {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white">
+      <a class="navbar-brand" href="/index.html"><img src="icon/logo.png" alt="logo" height=35% width=35%></a>
+      
+  
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active navbar-left">
+        <a class="nav-link" href="#" style="color: black;">女裝<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item navbar-left">
+        <a class="nav-link" href="#" style="color: black;">男裝</a>
+      </li>
+      <li class="nav-item navbar-left">
+        <a class="nav-link" href="#" style="color: black;">配件</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="input-group">
+      <input class="form-control mr-sm-2" type="text" aria-label="Search">
+      <!-- <button class="btn my-2 my-sm-0" type="submit"></button> -->
+      </div>
+    </form>
+    <ul class="flexbox">
+      <li class="search"><img src="icon/search.png"></li>
+      <li class="cart"><img src="icon/cart.png" alt=""></li>
+      <li class="member"><a href="/profile.html"><img src="icon/member.png" alt=""></a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- code here -->
+<main role="main">
+
+  <div class="container">
+      <div class="main-detail flexbox">
+          <img class="main-image col-sm-6">
+          <div class="detail-panel">
+              <div class="title" style="font-size:1.5em;"></div>
+              <div class="product-id" style="opacity: .6"></div>
+              <div class="price"></div>
+              <div class="color-container flexbox">
+                  <div class="variants">
+                      顏色|
+                  </div>
+                
+              </div>
+              <div class="size-container flexbox text-uppercase">
+                  <div class="variants size">
+                      尺寸|
+                  </div>
+              
+              </div>
+              <div class="amount-containe flexbox">
+                  <div class="variants">數量|</div>
+                  <ul class="flexbox">
+                      <li>-</li>
+                      <li class="number"></li>
+                      <li>+</li>
+                  </ul>
+              </div>
+              <div class="info">
+                  <div class="note"></div>
+                  <div class="texture"></div>
+                  <div class="place"></div>
+              </div>
+              
+              <form>
+          
+            <div class="form-group card-number-group">
+                <label for="card-number" class="control-label"><span id="cardtype"></span>卡號</label>
+                <div class="form-control card-number"></div>
+            </div>
+            <div class="form-group expiration-date-group">
+                <label for="expiration-date" class="control-label">卡片到期日</label>
+                <div class="form-control expiration-date" id="tappay-expiration-date"></div>
+            </div>
+            <div class="form-group cvc-group">
+                <label for="cvc" class="control-label">卡片後三碼</label>
+                <div class="form-control cvc"></div>
+            </div>
+
+            <button type="submit" class="btn btn-default">Pay</button>
+        </form>
+              
+   
+          </div>
+      </div>
+      <br>
+      <div class="d-inline">細部說明<hr></div>
+
+      <div class="images-container mb-5">
+          <p class="story0"></p>
+          <img class="images0 col-sm-6">
+          <p class="story1"></p>
+          <img class="images1 col-sm-6">
+      </div>
+  </div>
+
+
+</main>
+
+<footer class="bg-dark flexbox">
+  <ul class="footerNav flexbox">
+    <li><a href="#">關於 Stylish</a></li>
+    <li><a href="#">服務條款</a></li>
+    <li><a href="#">隱私政策</a></li>
+    <li><a href="#">聯絡我們</a></li>
+    <li><a href="#">FAQ</a></li>     
+  </ul> 
+
+  <div class="footerIcon">
+    <img src="icon/facebook.png">
+    <img src="icon/line.png">
+    <img src="icon/twitter.png">
+  </div>
+
+
+</footer>
+
+<script>
+
+ const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+        const url = `/api/1.0/products/details?id=${productId}`;
+        const container = document.querySelector(".container");
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                const data = JSON.parse(xhr.responseText).data[0]; 
+                console.log(data);
+                console.log(data.images[0]);
+                console.log(data.images[1]);
+                const mainImage = document.querySelector(".main-image");
+                // mainImage.src = `/upload/${data.main_image}`;
+                mainImage.src = data.main_image;
+
+                const title = document.querySelector(".title");
+                title.textContent = data.title;
+
+                const productId = document.querySelector(".product-id");
+                productId.textContent = data.id;
+
+                const price = document.querySelector(".price");
+                price.textContent = `TWD.${data.price}`;
+
+                const colorContainer = document.querySelector(".color-container");
+                for (let i = 0; i < data.colors.length; i++) {
+                    const color = document.createElement("div");
+                    color.classList.add("colorBox");
+                    color.style.backgroundColor = `#${data.colors[i].code}`;
+                    colorContainer.appendChild(color);
+                }
+
+                const sizeContainer = document.querySelector(".size-container");
+                for (let i = 0; i < data.sizes.length; i++) {
+                    const size = document.createElement("div");
+                    size.classList.add("size");
+                    size.textContent = data.sizes[i];
+                    sizeContainer.appendChild(size);
+                }
+
+                const number = document.querySelector(".number");
+                number.textContent = data.variants[0].stock;
+
+
+                const note = document.querySelector(".note");
+                note.textContent = data.note;
+
+                const texture = document.querySelector(".texture");
+                texture.textContent = `素材產地 / ${data.texture}`;
+
+                const place = document.querySelector(".place");
+                place.textContent = `加工產地 / ${data.place}`;
+
+                const story0 = document.querySelector(".story0");
+                story0.textContent = data.story;
+
+                const story1 = document.querySelector(".story1");
+                story1.textContent = data.story;
+
+                const image0 = document.querySelector(".images0");
+                // image0.src = `/upload/${data.images[0]}`;
+                image0.src = data.images[0];
+                const image1 = document.querySelector(".images1");
+                // image1.src = `/upload/${data.images[1]}`;
+                image1.src = data.images[1];
+            }
+        }
+        xhr.send();
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
+    <script>
+        // 設置好等等 GetPrime 所需要的金鑰
+        TPDirect.setupSDK(12348, 'app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF', 'sandbox')
+        
+        TPDirect.card.setup({
+            fields: {
+                number: {
+                    element: '.form-control.card-number',
+                    placeholder: '**** **** **** ****'
+                },
+                expirationDate: {
+                    element: document.getElementById('tappay-expiration-date'),
+                    placeholder: 'MM / YY'
+                },
+                ccv: {
+                    element: $('.form-control.cvc')[0],
+                    placeholder: '後三碼'
+                }
+            },
+            styles: {
+                'input': {
+                    'color': 'gray'
+                },
+                'input.ccv': {
+                    // 'font-size': '16px'
+                },
+                ':focus': {
+                    'color': 'black'
+                },
+                '.valid': {
+                    'color': 'green'
+                },
+                '.invalid': {
+                    'color': 'red'
+                },
+                '@media screen and (max-width: 400px)': {
+                    'input': {
+                        'color': 'orange'
+                    }
+                }
+            }
+        })
+        // listen for TapPay Field
+        TPDirect.card.onUpdate(function (update) {
+            /* Disable / enable submit button depend on update.canGetPrime  */
+            /* ============================================================ */
+            // update.canGetPrime === true
+            //     --> you can call TPDirect.card.getPrime()
+            // const submitButton = document.querySelector('button[type="submit"]')
+            if (update.canGetPrime) {
+                // submitButton.removeAttribute('disabled')
+                $('button[type="submit"]').removeAttr('disabled')
+            } else {
+                // submitButton.setAttribute('disabled', true)
+                $('button[type="submit"]').attr('disabled', true)
+            }
+            /* Change card type display when card type change */
+            /* ============================================== */
+            // cardTypes = ['visa', 'mastercard', ...]
+            var newType = update.cardType === 'unknown' ? '' : update.cardType
+            $('#cardtype').text(newType)
+            /* Change form-group style when tappay field status change */
+            /* ======================================================= */
+            // number 欄位是錯誤的
+            if (update.status.number === 2) {
+                setNumberFormGroupToError('.card-number-group')
+            } else if (update.status.number === 0) {
+                setNumberFormGroupToSuccess('.card-number-group')
+            } else {
+                setNumberFormGroupToNormal('.card-number-group')
+            }
+            if (update.status.expiry === 2) {
+                setNumberFormGroupToError('.expiration-date-group')
+            } else if (update.status.expiry === 0) {
+                setNumberFormGroupToSuccess('.expiration-date-group')
+            } else {
+                setNumberFormGroupToNormal('.expiration-date-group')
+            }
+            if (update.status.cvc === 2) {
+                setNumberFormGroupToError('.cvc-group')
+            } else if (update.status.cvc === 0) {
+                setNumberFormGroupToSuccess('.cvc-group')
+            } else {
+                setNumberFormGroupToNormal('.cvc-group')
+            }
+        })
+
+        $('form').on('submit', function (event) {
+            event.preventDefault()
+            
+            // fix keyboard issue in iOS device
+            forceBlurIos()
+            
+            const tappayStatus = TPDirect.card.getTappayFieldsStatus()
+            // console.log(tappayStatus)
+            // Check TPDirect.card.getTappayFieldsStatus().canGetPrime before TPDirect.card.getPrime
+            if (tappayStatus.canGetPrime === false) {
+                alert('can not get prime')
+                return
+            }
+
+            // Get prime
+            TPDirect.card.getPrime(function (result) {
+                if (result.status !== 0) {
+                    alert('get prime error ' + result.msg)
+                    return
+                }
+                
+                alert('get prime 成功，prime: ' + result.card.prime)
+                // Ajax send prime 回去後端
+
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open("POST", "/admin/checkout");
+
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                        
+                xhr.setRequestHeader('authorization','Bearer 30b57102ecdc31e9593b25640b61cac8380713951d8ea89ae19c927e0b08455b');
+
+                var p = {
+                    prime:result.card.prime,
+                    order:{
+                        "shipping": "delivery",
+                        "payment": "credit_card",
+                        "subtotal": 1234,"freight": 14,
+                        "total": 1300,
+                        "recipient":{
+                            "name": "Luke",
+                            "phone": "0987654321",
+                            "email": "luke@gmail.com",
+                            "address": "市政府站",
+                            "time": "morning"
+                        },
+                        list:[
+                         {
+                            "id": "201807202157",
+                            "name": "活力花紋長筒牛仔褲",
+                            "price": 1299,
+                            "color":{
+                                "code": "DDF0FF",
+                                "name": "淺藍"
+                            },
+                            "size": "M",
+                            "qty": 1
+                         }
+                        ]
+                    },
+
+                    };
+                
+                var prime = JSON.stringify(p);
+                xhr.send(prime);
+
+                xhr.onload = function(){
+                    if(!JSON.parse(xhr.responseText).data){
+
+                      var error = JSON.parse(xhr.responseText).error;
+                      alert('error'+error);
+
+                    }else{
+                    
+                      var orderNumber = JSON.parse(xhr.responseText).data.number;
+                      var url = `/thankyou.html?orderNumber=${orderNumber}`;
+                      console.log(url);
+                      window.location.assign(url);
+                    }
+                }
+                
+            })
+        })
+        function setNumberFormGroupToError(selector) {
+            $(selector).addClass('has-error')
+            $(selector).removeClass('has-success')
+        }
+        function setNumberFormGroupToSuccess(selector) {
+            $(selector).removeClass('has-error')
+            $(selector).addClass('has-success')
+        }
+        function setNumberFormGroupToNormal(selector) {
+            $(selector).removeClass('has-error')
+            $(selector).removeClass('has-success')
+        }
+        
+        function forceBlurIos() {
+            if (!isIos()) {
+                return
+            }
+            var input = document.createElement('input')
+            input.setAttribute('type', 'text')
+            // Insert to active element to ensure scroll lands somewhere relevant
+            document.activeElement.prepend(input)
+            input.focus()
+            input.parentNode.removeChild(input)
+        }
+        
+        function isIos() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+    </script>
+</body>
+</html>

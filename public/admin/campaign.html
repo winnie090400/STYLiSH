@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Product management page</title>
+</head>
+<body>
+        
+    <h4>Create a new product</h4>
+
+    <form action="/admin/campaign/add" enctype="multipart/form-data" method="POST">
+        <div>
+            Product ID
+            <input type="text" name="product_id" required>
+        </div>
+        <br>        
+        <div>
+            Picture
+            <input type="file" name="picture" required>
+        </div>
+        <br>
+        <div>
+            Story
+            <textarea name="story"></textarea>
+        </div>
+        <br>
+        <button type="submit" >Submit</button>
+    </form>
+
+</body>
+
+</html>

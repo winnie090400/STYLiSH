@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Product management page</title>
+</head>
+<body>
+        
+    <h4>Add new product</h4>
+
+    <form action="/admin/product/add" enctype="multipart/form-data" method="POST">
+        <div>
+            Id
+            <input name="id" required>
+        </div>
+        <br>
+        <div>
+            Category
+            <select name="category">
+                <option selected>Choose...</option>                      
+                <option value="men">Men</option>                      
+                <option value="women">Women</option>
+                <option value="accessories">Accessories</option>
+              </select>
+        </div>
+        <br>
+        <div>
+        	Title
+            <input type="text" name="title" required>
+        </div>
+        <br>
+        <div>
+            Description</br>
+            <textarea name="description"></textarea><br/>
+        </div>
+		<br>
+        <div>
+            Price
+            <input name="price" required>
+        </div>
+		<br>
+		<div>
+        	Texture
+            <input name="texture" required>    
+        </div>
+		<br>
+        <div>
+            Wash
+            <input  name="wash" required>
+        </div>
+		<br>        
+        <div>
+            Place
+            <input name="place" required>
+        </div>
+		<br>        
+        <div>
+            Note
+            <input name="note" required>
+        </div>
+        <br>
+        <div>
+            Story<br/>
+            <textarea name="story"></textarea><br/>
+        </div>
+        <br>
+        <div>
+            Main Image file:</br>
+            <input type="file" name="file"></br>
+            Other Image:</br>
+            <input type="file" name="file"></br>
+            <input type="file" name="file"></br>
+        </div>
+        <br>
+        <button type="submit" >Submit</button>        
+    </form>
+    
+
+    <h4>Add product Dtails</h4>
+
+    <form action="/admin/product/addDetail" method="POST">
+        <div>
+            Product Id
+            <input name="id" required>
+        </div>
+        <br>
+        <div>
+            Color
+            <input name="color" required>
+        </div>                
+        <br>
+        <div>
+            Size
+            <input name="size" required>
+        </div>               
+        <br>
+        <div>
+            stock
+            <input name="stock" required>
+        </div>
+        <br>
+        <button type="submit" >Submit</button>
+    </form>
+
+    <h4>Add New Color</h4>
+
+    <form action="/admin/product/addColor" method="POST">
+        <div>
+            Color code
+            <input name="code" required>
+        </div>
+        <br>        
+        <div>
+            Color Name
+            <input name="name" required>
+        </div>
+        <br>
+        <button type="submit" >Submit</button>
+    </form>
+
+</body>
+
+</html>
